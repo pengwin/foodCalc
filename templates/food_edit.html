@@ -1,0 +1,39 @@
+<div ng-show="editedFood" class="col-md-4 edited-food">
+    <h4><input class="edit-in-place" type="text" ng-model="editedFood.name" /></h4>
+
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">Порция</div>
+                <input class="form-control col-sm-3" type="number" ng-model="editedFood.weight.g"/>
+                <div class="input-group-addon">г</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">Белки</div>
+                <input class="form-control col-sm-3" type="number" ng-model="editedFood.proteins.g"/>
+                <div class="input-group-addon">г</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">Жиры</div>
+                <input class="form-control col-sm-3" type="number" ng-model="editedFood.fats.g"/>
+                <div class="input-group-addon">г</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">Углеводы</div>
+                <input class="form-control col-sm-3" type="number" ng-model="editedFood.carbohydrates.g"/>
+                <div class="input-group-addon">г</div>
+            </div>
+        </div>
+
+    </form>
+    <a class="edit" ng-click="removeFood();">Удалить</a>
+</div>

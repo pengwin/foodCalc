@@ -1,0 +1,9 @@
+<div ng-show="selectedFood && !editedFood" class="col-md-4 preview">
+    <h4>{{selectedFood.name}} <a ng-click="editFood(selectedFood)" class="glyphicon glyphicon-pencil"></a></h4>
+    <ul class="list-unstyled">
+        <li>Порция {{selectedFood.weight.g}}г</li>
+        <li>Белки {{selectedFood.proteins.g}}г</li>
+        <li>Жиры {{selectedFood.fats.g}}г</li>
+        <li>Углеводы {{selectedFood.carbohydrates.g}}г</li>
+    </ul>
+</div>

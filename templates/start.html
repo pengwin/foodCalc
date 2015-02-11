@@ -1,0 +1,47 @@
+<div class="row">
+    <h3>Начальные данные</h3>
+    <div class="col-md-2">
+        <h4>Параметры</h4>
+        <form class="form-inline">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">Вес</div>
+                    <input class="form-control weight" type="number" ng-model="weight.kg" ng-change="weightChanged();">
+                    <div class="input-group-addon">кг</div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6" ng-show="weightSetUp">
+        <h4>
+            Норма на день &nbsp;
+            <a class="edit" ng-hide="editMode" ng-click="editMode = true;">Изменить норму потребления</a>
+            <a class="edit" ng-show="editMode" ng-click="editMode = false;">Скрыть редактирование</a>
+        </h4>
+        <ul class="list-unstyled">
+            <li>
+                <span>Углеводы {{nutrients.carbohydrates | units : 'g'}}</span>
+                <span ng-hide="editMode">({{coefficients.carbohydratesAmount}}г на кг тела)</span>
+                <span ng-show="editMode">
+                    <input class="coefficients-edit edit-in-place" width="2" type="number" ng-model="coefficients.carbohydratesAmount" />г на кг тела
+                </span>
+            </li>
+            <li>
+                <span>Жиры {{nutrients.fats  | units : 'g'}}</span>
+                <span ng-hide="editMode">({{coefficients.fatsAmount}}г на кг тела)</span>
+                <span ng-show="editMode">
+                    <input class="coefficients-edit edit-in-place" width="2" type="number" ng-model="coefficients.fatsAmount" />г на кг тела
+                </span>
+            </li>
+            <li>
+                <span>Белок {{nutrients.proteins  | units : 'g'}}</span>
+                <span ng-hide="editMode">({{coefficients.proteinsAmount}}г на кг тела)</span>
+                <span ng-show="editMode">
+                    <input class="coefficients-edit edit-in-place" width="2" type="number" ng-model="coefficients.proteinsAmount" />г на кг тела
+                </span>
+            </li>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,69 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: right;
+}
+
+input[type="number"].weight {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+.edit {
+    color: #337ab7;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: 1px dotted #337ab7;
+}
+.edit label {
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.edit:hover{
+    text-decoration: none;
+    border-bottom: 1px solid #337ab7;
+}
+
+input.coefficients-edit{
+    width: 30px;
+}
+
+input.edit-in-place {
+    border: none;
+    border-bottom: 1px solid #337ab7;
+}
+
+.diff.positive {
+    color: forestgreen;
+}
+
+.diff.negative {
+    color: red;
+}
+
+.edited-food form {
+    padding-left: 15px;
+    padding-right: 90px;
+}
+
+.edited-food .input-group-addon:first-child {
+    width: 90px;
+}
+
+.meal-name {
+    font-weight: normal;
+}
+
+:checked + .meal-name {
+    font-weight: bold;
+}
+
+.meal-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

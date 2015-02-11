@@ -1,0 +1,20 @@
+<div class="row">
+    <h3>
+        Дневной рацион
+        <span class="edit">
+            <input id="roundPortions" type="checkbox" ng-model="settings.roundPortions" ng-change="settingsChanged();" />
+            <label for="roundPortions">Округлять до 100г</label>
+        </span>
+    </h3>
+    <div class="col-md-12">
+        <ul class="list-inline">
+            <li ng-repeat="meal in resultMeals">
+                <p><b>{{meal.name}}</b> {{meal.weight | units : 'g'}} </p>
+                <p>Углеводы {{meal.carbohydrates | units : 'g'}}</p>
+                <p>Жиры {{meal.fats  | units : 'g'}}</p>
+                <p>Белок {{meal.proteins  | units : 'g'}}</p>
+            </li>
+        </ul>
+    </div>
+
+</div>

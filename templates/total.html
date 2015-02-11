@@ -1,0 +1,19 @@
+<div class="row">
+    <h3>Итого</h3>
+
+    <div class="col-md-6">
+        <h4>Всего</h4>
+        <ul class="list-unstyled">
+            <li>Углеводы {{total.carbohydrates | units : 'g'}}
+                <diff value="diff.carbohydrates" percent="percents.carbohydrates"/>
+            </li>
+            <li>Жиры {{total.fats  | units : 'g'}}
+                <diff value="diff.fats" percent="percents.fats"/>
+            </li>
+            <li>Белок {{total.proteins  | units : 'g'}}
+                <diff value="diff.proteins" percent="percents.proteins"/>
+            </li>
+        </ul>
+    </div>
+
+</div>

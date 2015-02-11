@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+        ng-app="meal_calc"
+        ng-strtict-di
+        lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="deps/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="deps/bootstrap/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="app/app.css"/>
+
+    <script src="deps/angular/angular.js"></script>
+    <script src="deps/ui-router/angular-ui-router.js"></script>
+
+    <script src="app/models/weight.js"></script>
+    <script src="app/models/userWeight.js"></script>
+    <script src="app/models/nutrients.js"></script>
+    <script src="app/models/food.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/filters.js"></script>
+    <script src="app/directives.js"></script>
+    <script src="app/services/foodRepository.js"></script>
+    <script src="app/services/nutrientsService.js"></script>
+    <script src="app/services/metrics.js"></script>
+    <script src="app/services/settings.js"></script>
+    <script src="app/services/coefficients.js"></script>
+    <script src="app/services/mealsService.js"></script>
+
+    <script src="app/controllers/mainCtrl.js"></script>
+</head>
+    <body>
+        <div ui-view></div>
+    </body>
+</html>

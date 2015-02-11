@@ -1,0 +1,15 @@
+<div class="row">
+    <h3>
+        Еда
+        <a class="edit" ng-hide="editedFood" ng-click="addFood();">Добавить</a>
+        <a class="edit" ng-show="editedFood" ng-click="saveFood();">Закрыть редактирование</a>
+    </h3>
+
+    <div ng-show="!selectedFood && !editedFood" class="col-md-4 preview">
+        <p>Выберите набор продуктов из списка для расчета дневного рациона нужного нутриента</p>
+    </div>
+
+    <ng-include src="'templates/food_preview.html'"></ng-include>
+    <ng-include src="'templates/food_edit.html'"></ng-include>
+    <ng-include src="'templates/food_list.html'"></ng-include>
+</div>

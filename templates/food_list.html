@@ -1,0 +1,14 @@
+<div ng-repeat="list in foodLists" class="col-md-4">
+    <h4>{{list.label}}</h4>
+    <ul class="list-unstyled">
+        <li ng-repeat="meal in meals | orderBy : list.orderBy"
+            ng-hide="list.hidePredicate(meal);"
+            ng-mouseover="selectFood(meal)">
+            <input id="meal_{{list.name}}_{{$index}}" type="checkbox" ng-model="meal.selected[list.name]" ng-change="calculateMeals();"/>
+            <label for="meal_{{list.name}}_{{$index}}" class="meal-name">{{meal.name}}</label>
+        </li>
+    </ul>
+</div>
+
+
+
